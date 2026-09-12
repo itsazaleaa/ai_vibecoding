@@ -1,5 +1,5 @@
 # ai_vibecoding
 
-wassupp ppl
+wassup ppl
 
 blackpink in your area 
