@@ -1,5 +1,3 @@
-# ai_vibecoding
-
 #Jennie Fanpage
 This website is a fanpage with fun facts about Kim Jennie and a fun page for any fans of her.
 
