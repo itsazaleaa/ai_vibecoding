@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Spark Flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Study smarter</p>
+          <h1>Flashcards</h1>
+        </div>
+
+        <div class="stats" aria-label="Study statistics">
+          <div class="stat-box">
+            <span id="card-count">0</span>
+            <label>Cards</label>
+          </div>
+          <div class="stat-box">
+            <span id="mastered-count">0</span>
+            <label>Mastered</label>
+          </div>
+        </div>
+      </header>
+
+      <main class="study-panel">
+        <section class="toolbar" aria-label="Flashcard controls">
+          <div class="control-group">
+            <label for="category-filter">Category</label>
+            <select id="category-filter">
+              <option value="all">All</option>
+            </select>
+          </div>
+
+          <button id="shuffle-btn" class="ghost-btn" type="button">Shuffle</button>
+        </section>
+
+        <div class="flashcard-wrapper">
+          <button id="prev-btn" class="nav-btn" type="button" aria-label="Previous card">←</button>
+
+          <div id="flashcard" class="flashcard" tabindex="0" role="button" aria-label="Flashcard">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="badge" id="front-badge">Problem</span>
+                <h2 id="card-term">Load card</h2>
+                <p id="card-hint">Tap to reveal the answer</p>
+              </div>
+
+              <div class="flashcard-face flashcard-back">
+                <span class="badge accent" id="back-badge">Answer</span>
+                <h3 id="card-definition">Answer</h3>
+                <p class="example-label">Work</p>
+                <p id="card-example">Example work</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="next-btn" class="nav-btn" type="button" aria-label="Next card">→</button>
+        </div>
+
+        <div class="actions">
+          <button id="flip-btn" type="button">Flip Card</button>
+          <button id="known-btn" class="secondary-btn" type="button">Mark as Known</button>
+        </div>
+
+        <div class="progress-wrap" aria-live="polite">
+          <div class="progress-header">
+            <p>
+              Card <span id="card-position">1</span>
+              <span class="of-text">of</span>
+              <span id="card-total">0</span>
+            </p>
+          </div>
+          <div class="progress-bar" aria-hidden="true">
+            <span id="progress-fill"></span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
